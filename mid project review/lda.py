@@ -86,7 +86,14 @@ def search_topic(sentence):
     #print(topic_probs)
     return topic_probs.argmax()
 
-input_list = ['How do maxwell\'s equations of electromagnetism help in proving the dual nature of matter','Any thermal engine requires a negative temperature gradiant between a heat source and a heat sink in order to work','The various laws that define the behaviour of ideal gases on a large scale are Charles\'s law, Boyle\'s law, Gay Lussac\'s law and Avogadro\'s law, all of which can be combined to form the ideal gas equation','All reactants require a minimum amount of energy for them to react with each other, called activation energy','The tendancy of a cell\'s internal structure and chemicals to oppose the flow of current through it is called its internal resistance']
+input_list = [
+    'How do maxwell\'s equations of electromagnetism help in proving the dual nature of matter',
+    'Any thermal engine requires a negative temperature gradiant between a heat source and a heat sink in order to work',
+    'The various laws that define the behaviour of ideal gases on a large scale are Charles\'s law, Boyle\'s law, Gay Lussac\'s law and Avogadro\'s law, all of which can be combined to form the ideal gas equation',
+    'All reactants require a minimum amount of energy for them to react with each other, called activation energy',
+    'The tendancy of a cell\'s internal structure and chemicals to oppose the flow of current through it is called its internal resistance'
+]
+
 for input_text in input_list:
     topic_index = search_topic(input_text)
     print('Input sentence:', input_text)
